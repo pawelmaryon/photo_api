@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
-  resources :gallery_apis
-  
+  get 'photos', to: 'photos#show'
+  get 'user/:id', to:'users#show', as: 'user' 
   root to: 'albums#index'
   get 'albums/:id', to:'albums#show', as: 'album'
  
